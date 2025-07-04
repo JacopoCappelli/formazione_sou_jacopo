@@ -2,11 +2,12 @@
 
 evenOrOdd() {
     local number=$1
-    for (( n=1; n<=number; n++ )); do
-        if (( n % 2 == 0 )); then
-            echo "$n è pari"
+    for i in $(seq 1 $number) ; do
+        
+        if (( i % 2 == 0 )); then
+            echo "$i è pari"
         else
-            echo "$n è dispari"
+            echo "$i è dispari"
         fi
     done
 }
